@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Navaneet J</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content on Navaneet J</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 14 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Game Boy Emulator</title>
+				<link>http://localhost:1313/projects/gameboy/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/projects/gameboy/</guid>
+				<description>A Game Boy (DMG) emulator written in C++, built from scratch to understand the CPU, memory system, graphics, and interrupts.</description>
+			</item>
+			<item>
+				<title>6502 Emulator</title>
+				<link>http://localhost:1313/projects/6502/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/projects/6502/</guid>
+				<description>A cycle-counted NMOS 6502 emulator with memory-mapped I/O, interrupts, and a real ca65/ld65 assembler toolchain. Passes the Klaus Dormann functional test suite.</description>
+			</item>
+			<item>
+				<title>myos</title>
+				<link>http://localhost:1313/projects/myos/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/projects/myos/</guid>
+				<description>A tiny x86 OS built from a 512-byte boot sector up — real mode to protected mode, GDT setup, and a path toward a real kernel.</description>
+			</item>
+			<item>
+				<title>Smartwatch Firmware</title>
+				<link>http://localhost:1313/projects/smartwatch/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/projects/smartwatch/</guid>
+				<description>ESP-IDF firmware for a DIY smartwatch driving a GC9A01 240x240 round SPI display, with a from-scratch display driver.</description>
+			</item>
+			<item>
+				<title>Notes on Emulating the Game Boy PPU</title>
+				<link>http://localhost:1313/blogs/gb-ppu-notes/</link>
+				<pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blogs/gb-ppu-notes/</guid>
+				<description>&lt;p&gt;Writing the pixel pipeline was the part of the Game Boy emulator that took the longest to get cycle-accurate. This post walks through how the background FIFO, sprite fetcher, and mode-3 timing fit together, and the test ROMs that finally caught my off-by-one scanline bug.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Getting NMI/IRQ Timing Right on the 6502</title>
+				<link>http://localhost:1313/blogs/6502-interrupts/</link>
+				<pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blogs/6502-interrupts/</guid>
+				<description>&lt;p&gt;The Klaus Dormann test suite doesn&amp;rsquo;t check interrupt timing, so my 6502 core passed the functional tests while still being subtly wrong about when interrupts could fire relative to instruction boundaries. Here&amp;rsquo;s how I found and fixed it.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>From 512 Bytes to Protected Mode: Booting myos</title>
+				<link>http://localhost:1313/blogs/myos-boot/</link>
+				<pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blogs/myos-boot/</guid>
+				<description>&lt;p&gt;A walkthrough of the boot sector, the jump to a second-stage loader, enabling A20, building a GDT by hand, and the first far jump into 32-bit protected mode.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Writing a Display Driver for a Round SPI Screen</title>
+				<link>http://localhost:1313/blogs/gc9a01-driver/</link>
+				<pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blogs/gc9a01-driver/</guid>
+				<description>&lt;p&gt;The GC9A01 datasheet is short on examples, so this is the driver I wish existed when I started the smartwatch firmware — SPI setup, init sequence, and a fast framebuffer flush routine on ESP-IDF.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,73 @@
+{{ define "main" }}
+  <!-- ===== Hero ===== -->
+  <section class="section hero-section">
+    <p class="prompt-line">root@nav:~$ <span class="typed">whoami</span></p>
+
+    <div class="hero-card">
+      <h1 class="hero-name">{{ .Site.Params.name }}</h1>
+      <p class="hero-loc">📍 {{ .Site.Params.location }}</p>
+      <p class="hero-bio">{{ .Site.Params.bio }}</p>
+      <div class="hero-links">
+        <a href="{{ "/about/" | relURL }}">About Me <span class="arrow">↗</span></a>
+        <a href="{{ "/projects/" | relURL }}">View Projects <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About preview ===== -->
+  <section class="section content-section">
+    <p class="eyebrow">// cat about.md</p>
+    <h2 class="section-title">About</h2>
+    <div class="prose">
+      {{ .Site.Params.bio | markdownify }}
+    </div>
+    <a href="{{ "/about/" | relURL }}" class="more-link">read more →</a>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section class="section content-section">
+    <p class="eyebrow">// ls skills/</p>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      {{ range .Site.Data.skills }}
+      <span class="skill-chip">{{ . }}</span>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- ===== Featured projects ===== -->
+  <section class="section content-section">
+    <p class="eyebrow">// ls projects/ --featured</p>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="card-grid">
+      {{ $projects := where .Site.RegularPages "Section" "projects" }}
+      {{ range first 3 ($projects.ByParam "weight") }}
+      <a href="{{ .RelPermalink }}" class="card">
+        <h3 class="card-title">{{ .Title }}</h3>
+        <p class="card-desc">{{ .Params.summary }}</p>
+        <div class="tag-row">
+          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        <span class="card-link">view project →</span>
+      </a>
+      {{ end }}
+    </div>
+    <a href="{{ "/projects/" | relURL }}" class="more-link">view all →</a>
+  </section>
+
+  <!-- ===== Recent blogs ===== -->
+  <section class="section content-section">
+    <p class="eyebrow">// tail -n4 blogs.log</p>
+    <h2 class="section-title">Recent Blogs</h2>
+    <div class="blog-list">
+      {{ $blogs := where .Site.RegularPages "Section" "blogs" }}
+      {{ range first 4 ($blogs.ByDate.Reverse) }}
+      <a href="{{ .RelPermalink }}" class="blog-row">
+        <span class="blog-row-title">{{ .Title }}</span>
+        <span class="blog-row-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      </a>
+      {{ end }}
+    </div>
+    <a href="{{ "/blogs/" | relURL }}" class="more-link">view all →</a>
+  </section>
+{{ end }}

@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <section class="section content-section single-section">
+    <p class="eyebrow">// {{ .Date.Format "2006-01-02" }}</p>
+    <h2 class="section-title">{{ .Title }}</h2>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+    <a href="{{ "/blogs/" | relURL }}" class="more-link">← back to blogs</a>
+  </section>
+{{ end }}

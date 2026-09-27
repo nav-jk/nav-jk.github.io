@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>C&#43;&#43; on Navaneet J</title>
+		<link>http://localhost:1313/tags/c&#43;&#43;/</link>
+		<description>Recent content in C&#43;&#43; on Navaneet J</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Game Boy Emulator</title>
+				<link>http://localhost:1313/projects/gameboy/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/projects/gameboy/</guid>
+				<description>A Game Boy (DMG) emulator written in C++, built from scratch to understand the CPU, memory system, graphics, and interrupts.</description>
+			</item>
+			<item>
+				<title>6502 Emulator</title>
+				<link>http://localhost:1313/projects/6502/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/projects/6502/</guid>
+				<description>A cycle-counted NMOS 6502 emulator with memory-mapped I/O, interrupts, and a real ca65/ld65 assembler toolchain. Passes the Klaus Dormann functional test suite.</description>
+			</item>
+	</channel>
+</rss>

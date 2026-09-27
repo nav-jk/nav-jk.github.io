@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>C on Navaneet J</title>
+		<link>http://localhost:1313/tags/c/</link>
+		<description>Recent content in C on Navaneet J</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/tags/c/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>myos</title>
+				<link>http://localhost:1313/projects/myos/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/projects/myos/</guid>
+				<description>A tiny x86 OS built from a 512-byte boot sector up — real mode to protected mode, GDT setup, and a path toward a real kernel.</description>
+			</item>
+			<item>
+				<title>Smartwatch Firmware</title>
+				<link>http://localhost:1313/projects/smartwatch/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/projects/smartwatch/</guid>
+				<description>ESP-IDF firmware for a DIY smartwatch driving a GC9A01 240x240 round SPI display, with a from-scratch display driver.</description>
+			</item>
+	</channel>
+</rss>

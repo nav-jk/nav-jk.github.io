@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <section class="section content-section single-section">
+    <p class="eyebrow">// cat about.md</p>
+    <h2 class="section-title">{{ .Title }}</h2>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+    <div class="skills-grid">
+      {{ range .Site.Data.skills }}
+      <span class="skill-chip">{{ . }}</span>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

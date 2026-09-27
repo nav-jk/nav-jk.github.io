@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <section class="section content-section list-section">
+    <p class="eyebrow">// ls -la projects/</p>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-list">
+      {{ range .Pages.ByParam "weight" }}
+      <article class="project-row">
+        <div class="project-icon">{{ substr .Title 0 2 | upper }}</div>
+        <div class="project-row-body">
+          <h3 class="project-row-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+
+          {{ with .Params.highlights }}
+          <ul class="project-highlights">
+            {{ range first 3 . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+          {{ else }}
+          <p class="project-summary">{{ .Params.summary }}</p>
+          {{ end }}
+
+          <div class="tag-row">
+            {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+          </div>
+
+          <a class="more-link" href="{{ .RelPermalink }}">View Project ↗</a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

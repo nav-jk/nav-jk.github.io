@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · Navaneet J</title>
+  <meta name="description" content="Developer / Tech Enthusiast — Kerala, India">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&gt;_</text></svg>">
+</head>
+<body>
+
+  
+  <div class="preloader" id="preloader" role="status" aria-label="Loading">
+    <svg class="boot-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      
+      <g class="boot-pins" stroke="var(--boot-fg)" stroke-width="2.5" stroke-linecap="round">
+        <line x1="70" y1="52" x2="70" y2="70" style="animation-delay:0ms"/>
+        <line x1="92" y1="52" x2="92" y2="70" style="animation-delay:60ms"/>
+        <line x1="108" y1="52" x2="108" y2="70" style="animation-delay:120ms"/>
+        <line x1="130" y1="52" x2="130" y2="70" style="animation-delay:180ms"/>
+
+        <line x1="70" y1="148" x2="70" y2="130" style="animation-delay:240ms"/>
+        <line x1="92" y1="148" x2="92" y2="130" style="animation-delay:300ms"/>
+        <line x1="108" y1="148" x2="108" y2="130" style="animation-delay:360ms"/>
+        <line x1="130" y1="148" x2="130" y2="130" style="animation-delay:420ms"/>
+
+        <line x1="52" y1="70" x2="70" y2="70" style="animation-delay:60ms"/>
+        <line x1="52" y1="92" x2="70" y2="92" style="animation-delay:180ms"/>
+        <line x1="52" y1="108" x2="70" y2="108" style="animation-delay:300ms"/>
+        <line x1="52" y1="130" x2="70" y2="130" style="animation-delay:420ms"/>
+
+        <line x1="148" y1="70" x2="130" y2="70" style="animation-delay:120ms"/>
+        <line x1="148" y1="92" x2="130" y2="92" style="animation-delay:240ms"/>
+        <line x1="148" y1="108" x2="130" y2="108" style="animation-delay:360ms"/>
+        <line x1="148" y1="130" x2="130" y2="130" style="animation-delay:480ms"/>
+      </g>
+
+      
+      <rect class="boot-chip" x="70" y="70" width="60" height="60" rx="7"
+            fill="none" stroke="var(--boot-fg)" stroke-width="2.5"/>
+
+      
+      <path class="boot-mark" d="M83 108 L93 98 L83 88" fill="none"
+            stroke="var(--boot-fg)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <line class="boot-mark boot-cursor" x1="99" y1="112" x2="113" y2="112"
+            stroke="var(--boot-fg)" stroke-width="3.5" stroke-linecap="round"/>
+    </svg>
+
+    <div class="boot-bar-track"><div class="boot-bar-fill" id="bootBar"></div></div>
+  </div>
+
+  <div class="dot-grid" aria-hidden="true"></div>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light / Obsidian dark">◐</button>
+
+  
+  <header class="term-bar">
+    <a href="/" class="term-prompt">
+      <span class="term-user">nav</span><span class="term-at">@</span><span class="term-host">root</span><span class="term-colon">:~$</span>
+      <span class="term-cursor">▌</span>
+    </a>
+
+    <nav class="term-nav">
+      <a href="/about/" class="">~/about</a>
+      <a href="/projects/" class="active">~/projects</a>
+      <a href="/blogs/" class="">~/blogs</a>
+      <a href="/contact/" class="">~/contact</a>
+    </nav>
+
+    <button class="term-menu-btn" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+  </header>
+
+  
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/about/">~/about</a>
+    <a href="/projects/">~/projects</a>
+    <a href="/blogs/">~/blogs</a>
+    <a href="/contact/">~/contact</a>
+  </nav>
+
+  <main class="site-main">
+    
+  <section class="section content-section list-section">
+    <p class="eyebrow">// ls -la projects/</p>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-list">
+      
+      <article class="project-row">
+        <div class="project-icon">GA</div>
+        <div class="project-row-body">
+          <h3 class="project-row-title"><a href="/projects/gameboy/">Game Boy Emulator</a></h3>
+
+          
+          <ul class="project-highlights">
+            <li>Full DMG CPU instruction set, including several undocumented opcodes</li><li>Cycle-stepped PPU with background, window, and sprite (OAM) rendering</li><li>Interrupt controller, timers, and MBC1/MBC3 memory bank controllers</li>
+          </ul>
+          
+
+          <div class="tag-row">
+            <span class="tag">C&#43;&#43;</span><span class="tag">Emulation</span>
+          </div>
+
+          <a class="more-link" href="/projects/gameboy/">View Project ↗</a>
+        </div>
+      </article>
+      
+      <article class="project-row">
+        <div class="project-icon">65</div>
+        <div class="project-row-body">
+          <h3 class="project-row-title"><a href="/projects/6502/">6502 Emulator</a></h3>
+
+          
+          <ul class="project-highlights">
+            <li>Cycle-counted NMOS 6502 core, including documented illegal opcodes</li><li>Memory-mapped I/O and a proper NMI/IRQ interrupt model</li><li>Passes the Klaus Dormann functional test suite in full</li>
+          </ul>
+          
+
+          <div class="tag-row">
+            <span class="tag">C&#43;&#43;</span><span class="tag">Emulation</span><span class="tag">Assembly</span>
+          </div>
+
+          <a class="more-link" href="/projects/6502/">View Project ↗</a>
+        </div>
+      </article>
+      
+      <article class="project-row">
+        <div class="project-icon">MY</div>
+        <div class="project-row-body">
+          <h3 class="project-row-title"><a href="/projects/myos/">myos</a></h3>
+
+          
+          <ul class="project-highlights">
+            <li>Hand-written 512-byte boot sector loaded by real BIOS INT 13h calls</li><li>Second-stage loader that enables A20 and builds a GDT by hand</li><li>Far jump into 32-bit protected mode with a minimal C kernel entry</li>
+          </ul>
+          
+
+          <div class="tag-row">
+            <span class="tag">Assembly</span><span class="tag">C</span><span class="tag">OS Dev</span>
+          </div>
+
+          <a class="more-link" href="/projects/myos/">View Project ↗</a>
+        </div>
+      </article>
+      
+      <article class="project-row">
+        <div class="project-icon">SM</div>
+        <div class="project-row-body">
+          <h3 class="project-row-title"><a href="/projects/smartwatch/">Smartwatch Firmware</a></h3>
+
+          
+          <ul class="project-highlights">
+            <li>From-scratch GC9A01 SPI display driver — no vendor graphics library</li><li>Fast framebuffer flush routine tuned for a 240x240 round panel</li><li>Built on ESP-IDF directly against the ESP32 SPI and GPIO drivers</li>
+          </ul>
+          
+
+          <div class="tag-row">
+            <span class="tag">C</span><span class="tag">ESP32</span><span class="tag">Firmware</span>
+          </div>
+
+          <a class="more-link" href="/projects/smartwatch/">View Project ↗</a>
+        </div>
+      </article>
+      
+    </div>
+  </section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-name">Navaneet J</p>
+      <div class="social-row">
+        <a href="mailto:you@example.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
+        </a>
+        <a href="https://github.com/nav-jk" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.4c0-.9.3-1.6.8-2.1-2.7-.3-5.5-1.3-5.5-6a4.6 4.6 0 0 1 1.3-3.2 4.2 4.2 0 0 1 .1-3.2s1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.6 3.3-1.2 3.3-1.2.4 1 .5 2.2.1 3.2A4.6 4.6 0 0 1 21 9.6c0 4.7-2.9 5.7-5.5 6 .6.5.9 1.4.9 2.6V21"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7.5" y1="10.5" x2="7.5" y2="17"/><circle cx="7.5" cy="7" r="0.8" fill="currentColor" stroke="none"/><path d="M11.5 17v-4.2c0-1.6 1-2.6 2.4-2.6 1.4 0 2.1 1 2.1 2.6V17"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 Navaneet J — status: <span class="ok-tag">open to opportunities</span></p>
+      <nav class="footer-nav">
+        <a href="/about/">~/about</a>
+        <a href="/projects/">~/projects</a>
+        <a href="/blogs/">~/blogs</a>
+        <a href="/contact/">~/contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    
+    (function () {
+      var preloader = document.getElementById('preloader');
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function finish() {
+        preloader.classList.add('boot-done');
+        setTimeout(function () { preloader.style.display = 'none'; }, 450);
+      }
+
+      if (reduced) {
+        preloader.classList.add('boot-static');
+        setTimeout(finish, 250);
+      } else {
+        preloader.classList.add('boot-run');
+        setTimeout(finish, 1650);
+      }
+    })();
+
+    
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.getElementById('themeToggle');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      if (saved) root.setAttribute('data-theme', saved);
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        root.setAttribute('data-theme', 'dark');
+      }
+      toggle.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    })();
+
+    
+    (function () {
+      var btn = document.getElementById('menuToggle');
+      var nav = document.getElementById('mobileNav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      });
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.textContent = 'Menu';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

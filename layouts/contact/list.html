@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <section class="section content-section single-section">
+    <p class="eyebrow">// cat contact.md</p>
+    <h2 class="section-title">{{ .Title }}</h2>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+    <div class="contact-block">
+      <a class="term-btn" href="mailto:{{ .Site.Params.email }}">$ mail {{ .Site.Params.email }}</a>
+      <a class="term-btn" href="{{ .Site.Params.github }}" target="_blank" rel="noopener">$ open github</a>
+      <a class="term-btn" href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">$ open linkedin</a>
+    </div>
+  </section>
+{{ end }}

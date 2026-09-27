@@ -1,0 +1,13 @@
+baseURL = "https://nav-jk.github.io/"
+languageCode = "en-us"
+title = "Navaneet J"
+
+[params]
+  name       = "Navaneet J"
+  role       = "Developer / Tech Enthusiast"
+  location   = "Kerala, India"
+  bio        = "Final-year Electronics & Communication Engineering student at NIT Calicut, ex research intern at IIT Jodhpur. I like building things from the metal up — emulators, operating systems, firmware — mostly to understand how the layer below the one I'm used to actually works."
+  github     = "https://github.com/nav-jk"
+  linkedin   = "https://www.linkedin.com/in/your-handle"
+  instagram  = "https://instagram.com/yourhandle"
+  email      = "you@example.com"
