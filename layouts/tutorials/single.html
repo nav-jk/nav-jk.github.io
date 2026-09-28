@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="section content-section doc-single">
+  <p class="eyebrow">// cat tutorials/{{ .Parent.Title }}/{{ .File.BaseFileName }}.md</p>
+
+  <h1 class="section-title">{{ .Title }}</h1>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <p class="toc-label">// {{ .Parent.Title }}</p>
+
+      <nav class="chapter-nav">
+        <ul>
+          {{ $current := . }}
+
+          {{ range .Parent.RegularPages.ByWeight }}
+          <li>
+            <a
+              href="{{ .RelPermalink }}"
+              class="{{ if eq .RelPermalink $current.RelPermalink }}active{{ end }}"
+            >
+              {{ .Title }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="doc-content prose">
+      {{ .Content }}
+    </div>
+  </div>
+
+  <div class="chapter-pager">
+    {{ with .Params.prev }}
+      {{ with $.Site.GetPage . }}
+      <a class="term-btn" href="{{ .RelPermalink }}">
+        $ ← {{ .Title }}
+      </a>
+      {{ end }}
+    {{ end }}
+
+    {{ with .Params.next }}
+      {{ with $.Site.GetPage . }}
+      <a class="term-btn" href="{{ .RelPermalink }}">
+        $ {{ .Title }} →
+      </a>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  <a href="{{ .Parent.RelPermalink }}" class="more-link">
+    ← back to series
+  </a>
+</section>
+{{ end }}
