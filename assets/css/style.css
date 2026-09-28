@@ -1,10 +1,14 @@
+/* ==========================================================
+   Design tokens
+   ========================================================== */
+
 :root {
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --max-width: 1100px;
-  --max-width-wide: 1200px;
+  --max-width: 1200px;
+  --max-width-wide: 1400px;
 }
 
-/* ---- Light theme: paper + dot grid, terminal-green accent ---- */
+/* ---- Light theme ---- */
 
 html[data-theme="light"] {
   --bg: #fafaf9;
@@ -20,7 +24,7 @@ html[data-theme="light"] {
   --term-bar-bg: rgba(250, 250, 249, 0.85);
 }
 
-/* ---- Dark theme: near-black terminal ---- */
+/* ---- Dark theme ---- */
 
 html[data-theme="dark"] {
   --bg: #0e0f0c;
@@ -54,7 +58,9 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* ---------- Boot-sequence preloader ---------- */
+/* ==========================================================
+   Boot sequence
+   ========================================================== */
 
 .preloader {
   position: fixed;
@@ -76,8 +82,6 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-
-/* ---- Animated chip logo ---- */
 
 .boot-logo {
   width: 110px;
@@ -195,7 +199,9 @@ body {
   }
 }
 
-/* ---------- Dot grid background ---------- */
+/* ==========================================================
+   Dot grid background
+   ========================================================== */
 
 .dot-grid {
   position: fixed;
@@ -208,7 +214,9 @@ body {
   background-size: 26px 26px;
 }
 
-/* ---------- Theme toggle ---------- */
+/* ==========================================================
+   Theme toggle
+   ========================================================== */
 
 .theme-toggle {
   position: fixed;
@@ -233,7 +241,9 @@ body {
   color: var(--accent);
 }
 
-/* ---------- Top terminal bar (nav) ---------- */
+/* ==========================================================
+   Top terminal bar
+   ========================================================== */
 
 .term-bar {
   position: sticky;
@@ -344,16 +354,20 @@ body {
   display: flex;
 }
 
-/* ---------- Layout ---------- */
+/* ==========================================================
+   Main layout
+   ========================================================== */
 
 main {
-  max-width: var(--max-width);
+  width: min(1200px, calc(100% - 4rem));
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 main.site-main--wide {
-  max-width: var(--max-width-wide);
+  width: min(1400px, calc(100% - 4rem));
+  max-width: 1400px;
 }
 
 .site-main {
@@ -389,7 +403,9 @@ main.site-main--wide {
   color: var(--accent);
 }
 
-/* ---------- Hero ---------- */
+/* ==========================================================
+   Hero
+   ========================================================== */
 
 .hero-section {
   align-items: center;
@@ -463,7 +479,9 @@ main.site-main--wide {
   border-bottom-color: var(--accent);
 }
 
-/* ---------- Content sections ---------- */
+/* ==========================================================
+   Content sections
+   ========================================================== */
 
 .content-section {
   align-items: flex-start;
@@ -483,7 +501,7 @@ main.site-main--wide {
 
 .prose p {
   margin: 0 0 1rem;
-  max-width: 62ch;
+  max-width: 70ch;
 }
 
 .loc-line {
@@ -492,7 +510,9 @@ main.site-main--wide {
   margin-top: 0.5rem;
 }
 
-/* ---------- Skills ---------- */
+/* ==========================================================
+   Skills
+   ========================================================== */
 
 .skills-grid {
   display: flex;
@@ -508,7 +528,9 @@ main.site-main--wide {
   font-size: 0.88rem;
 }
 
-/* ---------- Project cards ---------- */
+/* ==========================================================
+   Project cards
+   ========================================================== */
 
 .card-grid {
   display: grid;
@@ -568,7 +590,9 @@ main.site-main--wide {
   color: var(--accent);
 }
 
-/* ---------- Projects: stacked list ---------- */
+/* ==========================================================
+   Projects: stacked list
+   ========================================================== */
 
 .project-list {
   display: flex;
@@ -645,7 +669,13 @@ main.site-main--wide {
   }
 }
 
-/* ---------- Tutorial / Project document layout ---------- */
+/* ==========================================================
+   Documentation / Tutorial layout
+   ========================================================== */
+
+.doc-single {
+  width: 100%;
+}
 
 .doc-single .tag-row {
   margin-bottom: 0;
@@ -656,14 +686,15 @@ main.site-main--wide {
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 4rem;
   align-items: start;
-  margin-top: 2rem;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .doc-sidebar {
   position: sticky;
   top: 5rem;
   font-size: 0.85rem;
+  min-width: 0;
 }
 
 .toc-label {
@@ -698,11 +729,14 @@ main.site-main--wide {
   color: var(--accent);
 }
 
-/* ---------- Tutorial content ---------- */
+/* ==========================================================
+   Tutorial content
+   ========================================================== */
 
 .doc-content {
   min-width: 0;
   width: 100%;
+  max-width: none;
 }
 
 .doc-content h1 {
@@ -711,47 +745,57 @@ main.site-main--wide {
 }
 
 .doc-content h2 {
-  font-size: 1.2rem;
-  margin: 2.1rem 0 0.9rem;
+  font-size: 1.35rem;
+  margin: 3rem 0 1rem;
   scroll-margin-top: 5.5rem;
 }
 
 .doc-content h3 {
-  font-size: 1.02rem;
-  margin: 1.5rem 0 0.7rem;
+  font-size: 1.1rem;
+  margin: 2rem 0 0.75rem;
   scroll-margin-top: 5.5rem;
 }
 
-.doc-content p,
+.doc-content p {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 90ch;
+  margin: 0 0 1.25rem;
+}
+
 .doc-content li {
   color: var(--text);
   font-size: 0.95rem;
-  line-height: 1.7;
-  max-width: 80ch;
+  line-height: 1.75;
+  max-width: 90ch;
 }
 
 .doc-content ul,
 .doc-content ol {
-  padding-left: 1.2rem;
+  padding-left: 1.3rem;
 }
 
 .doc-content :first-child {
   margin-top: 0;
 }
 
-/* ---------- Tutorial images ---------- */
+/* ==========================================================
+   Tutorial images
+   ========================================================== */
 
 .doc-content img {
   display: block;
+  width: auto;
   max-width: 100%;
   height: auto;
-  margin: 2rem auto;
+  margin: 2.5rem auto;
   border: 1px solid var(--border);
   border-radius: 10px;
 }
 
 .doc-content figure {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 .doc-content figure img {
@@ -765,20 +809,25 @@ main.site-main--wide {
   text-align: center;
 }
 
-/* ---------- Code blocks ---------- */
+/* ==========================================================
+   Code blocks
+   ========================================================== */
 
 .doc-content pre {
   width: 100%;
   max-width: 100%;
   overflow-x: auto;
-  padding: 1.25rem;
-  margin: 1.5rem 0;
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--card-bg);
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
-.doc-content code {
+.doc-content pre code {
+  white-space: pre;
   font-family: var(--font-mono);
 }
 
@@ -787,9 +836,13 @@ main.site-main--wide {
   border-radius: 4px;
   background: var(--chip-bg);
   color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
 }
 
-/* ---------- Tutorial chapter nav ---------- */
+/* ==========================================================
+   Tutorial chapter navigation
+   ========================================================== */
 
 .chapter-nav ul {
   list-style: none;
@@ -831,7 +884,9 @@ main.site-main--wide {
   margin: 2.5rem 0 1.25rem;
 }
 
-/* ---------- Blog list ---------- */
+/* ==========================================================
+   Blog list
+   ========================================================== */
 
 .blog-list {
   display: flex;
@@ -864,7 +919,9 @@ main.site-main--wide {
   white-space: nowrap;
 }
 
-/* ---------- Contact buttons ---------- */
+/* ==========================================================
+   Contact buttons
+   ========================================================== */
 
 .contact-block {
   display: flex;
@@ -889,7 +946,9 @@ main.site-main--wide {
   color: var(--accent);
 }
 
-/* ---------- Footer ---------- */
+/* ==========================================================
+   Footer
+   ========================================================== */
 
 .site-footer {
   border-top: 1px solid var(--border);
@@ -954,17 +1013,19 @@ main.site-main--wide {
   color: var(--accent);
 }
 
-/* ---------- Responsive ---------- */
+/* ==========================================================
+   Responsive
+   ========================================================== */
 
 @media (max-width: 1100px) {
   main {
-    padding: 0 2rem;
+    width: calc(100% - 3rem);
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   main {
-    padding: 0 1.5rem;
+    width: calc(100% - 3rem);
   }
 
   .term-nav {
@@ -995,19 +1056,27 @@ main.site-main--wide {
 
 @media (max-width: 600px) {
   main {
-    padding: 0 1rem;
+    width: calc(100% - 2rem);
   }
 
   .section {
     padding: 3rem 0;
   }
 
+  .doc-content p,
+  .doc-content li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
   .doc-content pre {
     padding: 1rem;
+    font-size: 0.78rem;
     border-radius: 8px;
   }
 
   .doc-content img {
+    max-width: 100%;
     margin: 1.5rem auto;
     border-radius: 8px;
   }
