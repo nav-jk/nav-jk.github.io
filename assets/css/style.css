@@ -242,7 +242,7 @@ main.site-main--wide { max-width: var(--max-width-wide); }
 .site-main { display: block; }
 .section { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding: 4rem 0; }
 .single-section { min-height: 70vh; }
-.list-section, .project-single {
+.list-section, .doc-single {
   min-height: auto;
   justify-content: flex-start;
   padding-top: 3rem;
@@ -387,8 +387,8 @@ main.site-main--wide { max-width: var(--max-width-wide); }
 }
 
 /* ---------- Project single: TOC sidebar layout ---------- */
-.project-single .tag-row { margin-bottom: 0; }
-.project-layout {
+.doc-single .tag-row { margin-bottom: 0; }
+.doc-layout {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 3rem;
@@ -396,9 +396,9 @@ main.site-main--wide { max-width: var(--max-width-wide); }
   margin-top: 2rem;
   width: 100%;
 }
-.project-toc { position: sticky; top: 5rem; font-size: 0.85rem; }
+.doc-sidebar { position: sticky; top: 5rem; font-size: 0.85rem; }
 .toc-label { color: var(--accent); margin: 0 0 0.75rem; font-size: 0.85rem; }
-.project-toc #TableOfContents ul {
+.doc-sidebar #TableOfContents ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -406,34 +406,56 @@ main.site-main--wide { max-width: var(--max-width-wide); }
   flex-direction: column;
   gap: 0.55rem;
 }
-.project-toc #TableOfContents ul ul {
+.doc-sidebar #TableOfContents ul ul {
   margin: 0.45rem 0 0 0.1rem;
   padding-left: 0.75rem;
   border-left: 1px solid var(--border);
 }
-.project-toc #TableOfContents a {
+.doc-sidebar #TableOfContents a {
   color: var(--text-muted);
   text-decoration: none;
   line-height: 1.4;
   display: inline-block;
 }
-.project-toc #TableOfContents a:hover { color: var(--accent); }
+.doc-sidebar #TableOfContents a:hover { color: var(--accent); }
 
-.project-content h2 { font-size: 1.2rem; margin: 2.1rem 0 0.9rem; scroll-margin-top: 5.5rem; }
-.project-content h3 { font-size: 1.02rem; margin: 1.5rem 0 0.7rem; scroll-margin-top: 5.5rem; }
-.project-content p, .project-content li { color: var(--text); font-size: 0.95rem; line-height: 1.7; }
-.project-content ul, .project-content ol { padding-left: 1.2rem; }
-.project-content :first-child { margin-top: 0; }
+.doc-content h2 { font-size: 1.2rem; margin: 2.1rem 0 0.9rem; scroll-margin-top: 5.5rem; }
+.doc-content h3 { font-size: 1.02rem; margin: 1.5rem 0 0.7rem; scroll-margin-top: 5.5rem; }
+.doc-content p, .doc-content li { color: var(--text); font-size: 0.95rem; line-height: 1.7; }
+.doc-content ul, .doc-content ol { padding-left: 1.2rem; }
+.doc-content :first-child { margin-top: 0; }
 
 @media (max-width: 860px) {
-  .project-layout { grid-template-columns: 1fr; gap: 1.5rem; }
-  .project-toc {
+  .doc-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .doc-sidebar {
     position: static;
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 1rem 1.25rem;
   }
 }
+
+/* ---------- Tutorial chapter nav (sidebar) ---------- */
+.chapter-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  counter-reset: chapter;
+}
+.chapter-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  display: inline-block;
+}
+.chapter-nav a:hover { color: var(--accent); }
+.chapter-nav a.active { color: var(--accent); font-weight: 700; }
+.chapter-count { color: var(--text-muted); font-size: 0.82rem; margin: 0 0 0.9rem; }
+.chapter-pager { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2.5rem 0 1.25rem; }
 
 /* ---------- Blog list ---------- */
 .blog-list { display: flex; flex-direction: column; width: 100%; gap: 0.1rem; }

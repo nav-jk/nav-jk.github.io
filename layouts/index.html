@@ -55,19 +55,25 @@
     <a href="{{ "/projects/" | relURL }}" class="more-link">view all →</a>
   </section>
 
-  <!-- ===== Recent blogs ===== -->
+  <!-- ===== Tutorial teaser ===== -->
   <section class="section content-section">
-    <p class="eyebrow">// tail -n4 blogs.log</p>
-    <h2 class="section-title">Recent Blogs</h2>
-    <div class="blog-list">
-      {{ $blogs := where .Site.RegularPages "Section" "blogs" }}
-      {{ range first 4 ($blogs.ByDate.Reverse) }}
-      <a href="{{ .RelPermalink }}" class="blog-row">
-        <span class="blog-row-title">{{ .Title }}</span>
-        <span class="blog-row-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-      </a>
+    <p class="eyebrow">// ls tutorials/</p>
+    <h2 class="section-title">Tutorials</h2>
+    <div class="card-grid">
+      {{ with .Site.GetPage "tutorials" }}
+      {{ range .Sections }}
+      <div class="card">
+        <h3 class="card-title">{{ .Title }}</h3>
+        <p class="card-desc">{{ .Params.description | default .Summary }}</p>
+        <p class="chapter-count">{{ len .RegularPages }} chapters</p>
+        {{ $first := index (.RegularPages.ByWeight) 0 }}
+        {{ with $first }}
+        <a href="{{ .RelPermalink }}" class="card-link">start reading →</a>
+        {{ end }}
+      </div>
+      {{ end }}
       {{ end }}
     </div>
-    <a href="{{ "/blogs/" | relURL }}" class="more-link">view all →</a>
+    <a href="{{ "/tutorials/" | relURL }}" class="more-link">view all →</a>
   </section>
 {{ end }}
