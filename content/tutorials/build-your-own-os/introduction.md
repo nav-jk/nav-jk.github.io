@@ -16,7 +16,7 @@ There is no practical reason for you to build an OS from scratch. If your goal i
 
 In fact, you can now safely close this window and go do something productive.
 
-![alt text](image.png)
+![Random Arch meme](/images/tutorials/build-your-own-os/image.png)
 Random arch meme
 
 ...
@@ -56,7 +56,7 @@ Probably often.
 
 That's actually part of the fun.
 
-![alt text](image-1.png)
+![Meme](/images/tutorials/build-your-own-os/image-1.png)
 
 So, if you're still here, congratulations.
 
