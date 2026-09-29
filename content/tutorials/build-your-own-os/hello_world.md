@@ -277,4 +277,9 @@ And that's basically our first tiny piece of an OS.
 
 At this point, all we're doing is getting the CPU to execute some assembly and convince the BIOS to print a string. But this is the first point where the code we're writing is running directly on the machine rather than inside another operating system.
 
-Next, we'll actually boot this thing using QEMU and see whether all of this nonsense works.
+You can run the image you created in your vm by using this
+```bash
+qemu-system-i386 -fda build/main_floppy.img
+```
+
+![First Boot](/images/tutorials/build-your-own-os/first_boot.png)
