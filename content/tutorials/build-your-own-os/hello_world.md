@@ -1,6 +1,7 @@
+---
 title: "hello world"
 weight: 3
----------
+---
 
 # Starting
 
